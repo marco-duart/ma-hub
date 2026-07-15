@@ -53,6 +53,7 @@ export interface PortfolioItem {
   description: string;
   technologies: string;
   link: string;
+  photos?: PortfolioPhoto[];
 }
 
 export interface PortfolioPhoto {

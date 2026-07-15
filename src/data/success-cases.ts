@@ -1,4 +1,4 @@
-import { SuccessCase } from "../models";
+import { SuccessCase } from "./types";
 
 export const successCases: SuccessCase[] = [
   {
