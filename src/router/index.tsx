@@ -16,8 +16,8 @@ export function AppRouter() {
         <Route path="/consultoria" element={<ConsultoriaPage />} />
         <Route path="/axis" element={<AxisPage />} />
         <Route path="/axis/:id" element={<AxisSolutionDetailPage />} />
-        <Route path="/pixel-vault" element={<PixelVaultPage />} />
-        <Route path="/pixel-vault/:id" element={<PixelProductDetailPage />} />
+        <Route path="/pixel" element={<PixelVaultPage />} />
+        <Route path="/pixel/:id" element={<PixelProductDetailPage />} />
         <Route path="/404" element={<NotFoundPage />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Route>

@@ -5,6 +5,17 @@ const Wrap = styled("header", {
   flexDirection: "column",
   gap: "$2",
   marginBottom: "$6",
+  variants: {
+    variant: {
+      default: {},
+      consultoria: {
+        gap: "$1",
+      },
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
 });
 
 const Eyebrow = styled("span", {
@@ -13,6 +24,18 @@ const Eyebrow = styled("span", {
   textTransform: "uppercase",
   letterSpacing: "0.2em",
   color: "$textDim",
+  variants: {
+    variant: {
+      default: {},
+      consultoria: {
+        color: "#64748b",
+        letterSpacing: "0.16em",
+      },
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
 });
 
 const Title = styled("h2", {
@@ -20,28 +43,55 @@ const Title = styled("h2", {
   fontWeight: 700,
   color: "$text",
   "@md": { fontSize: "$3xl" },
+  variants: {
+    variant: {
+      default: {},
+      consultoria: {
+        color: "#0f172a",
+        fontFamily: "'Source Serif 4', serif",
+        letterSpacing: "-0.01em",
+        fontWeight: 600,
+      },
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
 });
 
 const Subtitle = styled("p", {
   color: "$textMuted",
   fontSize: "$md",
   maxWidth: "680px",
+  variants: {
+    variant: {
+      default: {},
+      consultoria: {
+        color: "#475569",
+      },
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
 });
 
 export function SectionHeader({
   eyebrow,
   title,
   subtitle,
+  variant,
 }: {
   eyebrow?: string;
   title: string;
   subtitle?: string;
+  variant?: "default" | "consultoria";
 }) {
   return (
-    <Wrap>
-      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <Title>{title}</Title>
-      {subtitle && <Subtitle>{subtitle}</Subtitle>}
+    <Wrap variant={variant}>
+      {eyebrow && <Eyebrow variant={variant}>{eyebrow}</Eyebrow>}
+      <Title variant={variant}>{title}</Title>
+      {subtitle && <Subtitle variant={variant}>{subtitle}</Subtitle>}
     </Wrap>
   );
 }

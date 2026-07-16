@@ -23,7 +23,7 @@ const LEVEL_LABEL: Record<SkillLevelEnum, string> = {
 
 const Grid = styled("div", {
   display: "grid",
-  gap: "$4",
+  gap: "$5",
   gridTemplateColumns: "1fr",
   "@sm": { gridTemplateColumns: "repeat(2, 1fr)" },
   "@md": { gridTemplateColumns: "repeat(3, 1fr)" },
@@ -31,41 +31,50 @@ const Grid = styled("div", {
 
 const Group = styled("div", {
   padding: "$4",
-  borderRadius: "$lg",
-  border: "1px solid $border",
-  backgroundColor: "$surface",
+  borderRadius: "4px",
+  border: "1px solid rgba(148,163,184,0.35)",
+  backgroundColor: "rgba(255,255,255,0.9)",
+  boxShadow: "0 16px 40px -34px rgba(15,23,42,0.45)",
 });
 
 const GroupTitle = styled("h4", {
-  fontFamily: "$mono",
+  fontFamily: "'IBM Plex Sans', sans-serif",
   fontSize: "$xs",
   textTransform: "uppercase",
-  letterSpacing: "0.2em",
-  color: "$consultoria",
-  marginBottom: "$3",
+  letterSpacing: "0.14em",
+  color: "#1e293b",
+  marginBottom: "$4",
+  borderBottom: "1px solid rgba(148,163,184,0.35)",
+  paddingBottom: "$2",
 });
 
 const Chip = styled("a", {
-  display: "inline-flex",
+  display: "flex",
   alignItems: "center",
-  gap: "$2",
-  px: "$2",
-  py: "$1",
-  borderRadius: "$pill",
+  justifyContent: "space-between",
+  gap: "$3",
+  px: "$3",
+  py: "$2",
+  borderRadius: "3px",
   fontSize: "$sm",
-  border: "1px solid $border",
-  color: "$text",
-  backgroundColor: "$bgElev",
-  marginRight: "$2",
+  border: "1px solid rgba(148,163,184,0.35)",
+  color: "#0f172a",
+  backgroundColor: "rgba(248,250,252,0.95)",
   marginBottom: "$2",
-  transition: "border-color $fast",
-  "&:hover": { borderColor: "$consultoria" },
+  transition: "transform $fast, border-color $fast, background-color $fast",
+  "&:hover": {
+    borderColor: "#0ea5e9",
+    backgroundColor: "#ffffff",
+    transform: "translateX(3px)",
+  },
 });
 
 const Level = styled("span", {
-  fontFamily: "$mono",
-  fontSize: "10px",
-  color: "$textDim",
+  fontFamily: "'IBM Plex Sans', sans-serif",
+  fontSize: "$xs",
+  color: "#64748b",
+  textTransform: "uppercase",
+  letterSpacing: "0.08em",
 });
 
 export function SkillsGrid({ skills }: { skills: Skill[] }) {

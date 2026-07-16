@@ -3,25 +3,34 @@ import type { User } from "@/data/types";
 
 const Grid = styled("div", {
   display: "grid",
-  gap: "$4",
+  gap: "$5",
   gridTemplateColumns: "1fr",
   "@md": { gridTemplateColumns: "repeat(3, 1fr)" },
 });
 
 const Block = styled("article", {
   padding: "$5",
-  borderRadius: "$lg",
-  border: "1px solid $border",
-  backgroundColor: "$surface",
+  borderRadius: "4px",
+  border: "1px solid rgba(148,163,184,0.38)",
+  borderLeft: "4px solid #0f172a",
+  backgroundColor: "rgba(255,255,255,0.9)",
+  boxShadow: "0 20px 45px -36px rgba(15,23,42,0.5)",
+  minHeight: "210px",
 });
 
 const Title = styled("h3", {
-  fontSize: "$lg",
+  fontFamily: "'Source Serif 4', serif",
+  fontSize: "$xl",
   fontWeight: 600,
-  marginBottom: "$2",
+  color: "#0f172a",
+  marginBottom: "$3",
 });
 
-const Text = styled("p", { color: "$textMuted", fontSize: "$sm", lineHeight: 1.55 });
+const Text = styled("p", {
+  color: "#334155",
+  fontSize: "$sm",
+  lineHeight: 1.65,
+});
 
 export function BioBlocks({ bio }: { bio: User["bio"] }) {
   return (

@@ -16,9 +16,13 @@ export const Badge = styled("span", {
   variants: {
     tone: {
       consultoria: {
-        color: "$consultoria",
-        borderColor: "rgba(56,189,248,0.35)",
-        backgroundColor: "rgba(56,189,248,0.08)",
+        color: "#1e293b",
+        borderColor: "rgba(148,163,184,0.5)",
+        borderRadius: "4px",
+        backgroundColor: "rgba(248,250,252,0.95)",
+        fontFamily: "'IBM Plex Sans', sans-serif",
+        textTransform: "uppercase",
+        letterSpacing: "0.06em",
       },
       axis: {
         color: "$axis",
@@ -26,9 +30,13 @@ export const Badge = styled("span", {
         backgroundColor: "rgba(168,85,247,0.08)",
       },
       pixel: {
-        color: "$pixel",
-        borderColor: "rgba(34,197,94,0.35)",
-        backgroundColor: "rgba(34,197,94,0.08)",
+        color: "#101623",
+        borderColor: "#101623",
+        borderRadius: "0px",
+        borderWidth: "2px",
+        backgroundColor: "#22c55e",
+        fontFamily: "'Bangers', cursive",
+        letterSpacing: "0.08em",
       },
       warning: { color: "$warning", borderColor: "rgba(245,158,11,0.35)" },
       success: { color: "$success" },

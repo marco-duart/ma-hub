@@ -6,47 +6,63 @@ const List = styled("ol", {
   listStyle: "none",
   padding: 0,
   margin: 0,
-  position: "relative",
-  "&::before": {
-    content: '""',
-    position: "absolute",
-    left: "8px",
-    top: 0,
-    bottom: 0,
-    width: "1px",
-    background: "linear-gradient(to bottom, $consultoria, transparent)",
-    opacity: 0.4,
-  },
+  display: "grid",
+  gap: "$4",
 });
 
 const Item = styled("li", {
-  position: "relative",
-  paddingLeft: "$6",
-  paddingBottom: "$6",
-  "&:last-child": { paddingBottom: 0 },
-});
-
-const Dot = styled("span", {
-  position: "absolute",
-  left: "2px",
-  top: "6px",
-  size: "12px",
-  borderRadius: "$pill",
-  background: "$consultoria",
-  boxShadow: "0 0 0 4px rgba(56,189,248,0.15)",
+  display: "grid",
+  gap: "$3",
+  backgroundColor: "rgba(255,255,255,0.88)",
+  border: "1px solid rgba(148,163,184,0.38)",
+  borderRadius: "4px",
+  padding: "$5",
+  boxShadow: "0 18px 42px -36px rgba(15,23,42,0.5)",
+  "@md": {
+    gridTemplateColumns: "180px 1fr",
+    alignItems: "start",
+  },
 });
 
 const Period = styled("div", {
-  fontFamily: "$mono",
+  fontFamily: "'IBM Plex Sans', sans-serif",
   fontSize: "$xs",
-  color: "$textDim",
+  color: "#1e293b",
   textTransform: "uppercase",
-  letterSpacing: "0.15em",
+  letterSpacing: "0.12em",
+  fontWeight: 600,
+  border: "1px solid rgba(100,116,139,0.34)",
+  borderRadius: "999px",
+  width: "fit-content",
+  padding: "4px 10px",
+  backgroundColor: "rgba(241,245,249,0.9)",
 });
 
-const Title = styled("h4", { fontSize: "$md", fontWeight: 600, marginTop: "$1" });
-const Sub = styled("p", { color: "$consultoria", fontSize: "$sm", marginTop: "2px" });
-const Text = styled("p", { color: "$textMuted", fontSize: "$sm", marginTop: "$2", lineHeight: 1.55 });
+const Body = styled("div", {
+  borderLeft: "2px solid rgba(15,23,42,0.18)",
+  paddingLeft: "$4",
+});
+
+const Title = styled("h4", {
+  fontSize: "$lg",
+  fontWeight: 600,
+  color: "#0f172a",
+  fontFamily: "'Source Serif 4', serif",
+});
+
+const Sub = styled("p", {
+  color: "#0ea5e9",
+  fontSize: "$sm",
+  marginTop: "$1",
+  fontWeight: 600,
+});
+
+const Text = styled("p", {
+  color: "#334155",
+  fontSize: "$sm",
+  marginTop: "$2",
+  lineHeight: 1.6,
+});
 
 type Entry = { id: number; title: string; sub: string; period: string; description: string };
 
@@ -82,11 +98,12 @@ export function Timeline({
     <List>
       {entries.map((e) => (
         <Item key={e.id}>
-          <Dot />
           <Period>{e.period}</Period>
-          <Title>{e.title}</Title>
-          <Sub>{e.sub}</Sub>
-          <Text>{e.description}</Text>
+          <Body>
+            <Title>{e.title}</Title>
+            <Sub>{e.sub}</Sub>
+            <Text>{e.description}</Text>
+          </Body>
         </Item>
       ))}
     </List>

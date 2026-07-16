@@ -68,7 +68,7 @@ export function PixelProductDetailPage() {
     return (
       <PageContent>
         <p>Produto não encontrado.</p>
-        <Link to="/pixel-vault">Voltar</Link>
+        <Link to="/pixel">Voltar</Link>
       </PageContent>
     );
   }
@@ -82,7 +82,7 @@ export function PixelProductDetailPage() {
 
   return (
     <PageContent>
-      <Back to="/pixel-vault"><ArrowLeft size={16} /> Voltar para o catálogo</Back>
+      <Back to="/pixel"><ArrowLeft size={16} /> Voltar para o catálogo</Back>
       <Grid>
         <Cover>{product.imageEmoji}</Cover>
         <div>

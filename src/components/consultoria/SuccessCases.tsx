@@ -4,30 +4,44 @@ import type { SuccessCase } from "@/data/types";
 
 const Grid = styled("div", {
   display: "grid",
-  gap: "$4",
+  gap: "$5",
   gridTemplateColumns: "1fr",
   "@md": { gridTemplateColumns: "repeat(2, 1fr)" },
 });
 
 const Item = styled("article", {
   padding: "$5",
-  borderRadius: "$lg",
-  border: "1px solid $border",
-  backgroundColor: "$surface",
+  borderRadius: "6px",
+  border: "1px solid rgba(148,163,184,0.34)",
   display: "flex",
   flexDirection: "column",
-  gap: "$3",
+  gap: "$4",
+  backgroundColor: "rgba(255,255,255,0.92)",
+  boxShadow: "0 20px 45px -36px rgba(15,23,42,0.48)",
 });
 
 const Meta = styled("div", { display: "flex", gap: "$2", flexWrap: "wrap" });
-const Title = styled("h4", { fontSize: "$lg", fontWeight: 600 });
-const Text = styled("p", { color: "$textMuted", fontSize: "$sm", lineHeight: 1.55 });
-const Impact = styled("p", {
-  color: "$consultoria",
-  fontSize: "$sm",
+const Title = styled("h4", {
+  fontSize: "$xl",
   fontWeight: 600,
-  paddingTop: "$3",
-  borderTop: "1px dashed $border",
+  color: "#0f172a",
+  fontFamily: "'Source Serif 4', serif",
+});
+
+const Text = styled("p", {
+  color: "#334155",
+  fontSize: "$sm",
+  lineHeight: 1.65,
+});
+
+const Impact = styled("p", {
+  color: "#0f172a",
+  fontSize: "$sm",
+  fontWeight: 700,
+  paddingTop: "$4",
+  borderTop: "1px solid rgba(148,163,184,0.35)",
+  textTransform: "uppercase",
+  letterSpacing: "0.06em",
 });
 
 export function SuccessCases({ cases }: { cases: SuccessCase[] }) {
