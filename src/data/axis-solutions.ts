@@ -14,7 +14,7 @@ export const axisSolutions: AxisSolution[] = [
       "Ferramentas de monetização integradas",
       "Analytics em tempo real para o criador",
     ],
-    link: "https://mostraai.com",
+    link: "https://mostraai.app.br",
   },
   {
     id: 2,
