@@ -10,7 +10,7 @@ export const user: User = {
   whatsapp: "https://wa.me/5562994069668",
   github: "https://github.com/marco-duart",
   linkedin: "https://www.linkedin.com/in/aurelio-duart",
-  instagram: "",
+  instagram: "https://www.instagram.com/maaxis.tech",
   threads: "",
   google: "marcoaureliodarkangel@gmail.com",
   youtube: "https://www.youtube.com/@marco-duart",

@@ -72,7 +72,7 @@ export function AppFooter() {
           <Small>Consultoria · M.A. Axis · Pixel Vault</Small>
         </div>
         <Socials>
-          <Icon href={`mailto:${user.email}`} aria-label="Email"><Mail size={18} /></Icon>
+          <Icon href={`mailto:${user.businessEmail}`} aria-label="Email"><Mail size={18} /></Icon>
           <Icon href={user.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></Icon>
           <Icon href={user.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></Icon>
           <Icon href={user.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={18} /></Icon>
