@@ -13,4 +13,16 @@ export const pixelProducts: PixelProduct[] = [
     stock: 1,
     image_url: "/assets/products/1.png",
   },
+  {
+    id: 2,
+    name: "Busto Kratos",
+    category: "Figura Decorativa",
+    price: 21.9,
+    fandom: "Jogo - God of War",
+    description: "Busto miniatura do Kratos, personagem principal do jogo God of War. Feito em PLA, com detalhes pintados à mão.",
+    material: "PLA",
+    dimensions: "6 cm",
+    stock: 1,
+    image_url: "/assets/products/2.png",
+  },
 ];
