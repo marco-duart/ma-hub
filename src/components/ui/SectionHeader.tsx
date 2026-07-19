@@ -8,6 +8,7 @@ const Wrap = styled("header", {
   variants: {
     variant: {
       default: {},
+      pixel: {},
       consultoria: {
         gap: "$1",
       },
@@ -27,6 +28,7 @@ const Eyebrow = styled("span", {
   variants: {
     variant: {
       default: {},
+      pixel: {},
       consultoria: {
         color: "#64748b",
         letterSpacing: "0.16em",
@@ -46,6 +48,12 @@ const Title = styled("h2", {
   variants: {
     variant: {
       default: {},
+      pixel: {
+        color: "$pixel",
+        fontFamily: "'Bangers', cursive",
+        letterSpacing: "0.05em",
+        textTransform: "uppercase",
+      },
       consultoria: {
         color: "#0f172a",
         fontFamily: "'Source Serif 4', serif",
@@ -66,6 +74,7 @@ const Subtitle = styled("p", {
   variants: {
     variant: {
       default: {},
+      pixel: {},
       consultoria: {
         color: "#475569",
       },
@@ -85,7 +94,7 @@ export function SectionHeader({
   eyebrow?: string;
   title: string;
   subtitle?: string;
-  variant?: "default" | "consultoria";
+  variant?: "default" | "consultoria" | "pixel";
 }) {
   return (
     <Wrap variant={variant}>

@@ -167,7 +167,7 @@ export function PixelVaultPage() {
         </Hero>
 
         <div style={{ marginTop: 48 }}>
-          <SectionHeader eyebrow="Catálogo" title="Explore o vault" />
+          <SectionHeader eyebrow="Catálogo" title="Explore o vault" variant="pixel" />
           <Filters>
             {categories.map((c) => (
               <FilterBtn key={c} active={active === c} onClick={() => setActive(c)}>
