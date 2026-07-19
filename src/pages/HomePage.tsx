@@ -39,40 +39,114 @@ const PortalCard = styled(Link, {
   justifyContent: "space-between",
   alignItems: "flex-start",
   padding: "$6",
-  minHeight: "350px",
+  minHeight: "300px",
   color: "$text",
   overflow: "hidden",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   textDecoration: "none",
+  gap: "$6",
+
+  "@md": {
+    minHeight: "350px",
+  },
 
   "&:hover": { transform: "translateY(-4px)" },
 
   variants: {
     accent: {
       consultoria: {
-        backgroundColor: "#F8F9FA",
-        border: "1px solid #DEE2E6",
-        color: "#212529",
-        borderRadius: "8px",
-        "&:hover": { boxShadow: "0 10px 25px -5px rgba(0,0,0,0.1)" },
+        background:
+          "linear-gradient(145deg, #ffffff 0%, #f1f5f9 45%, #e2e8f0 100%)",
+        border: "1px solid #cbd5e1",
+        color: "#111827",
+        borderRadius: "12px",
+        "&:hover": { boxShadow: "0 14px 30px -10px rgba(15,23,42,0.28)" },
       },
       axis: {
-        backgroundColor: "#0D0029",
-        border: "1px solid $axis",
-        color: "#E0E0E0",
-        borderRadius: "0",
-        "&:hover": { boxShadow: "$glowAxis" },
+        background:
+          "radial-gradient(circle at 50% 35%, rgba(234,179,8,0.28) 0%, rgba(234,179,8,0.06) 26%, rgba(15,23,42,0.2) 48%, #0b1022 100%)",
+        border: "1px solid #2A144B",
+        color: "#e5e7eb",
+        borderRadius: "10px",
+        "&:hover": { boxShadow: "0 0 36px -10px rgba(131, 59, 246, 0.55)" },
       },
       pixel: {
-        backgroundColor: "#27272A",
-        border: "4px solid $pixel",
-        color: "#A1A1AA",
+        background:
+          "linear-gradient(145deg, #22C15D 0%, #22C15D 45%, #22C15D 100%)",
+        border: "3px solid #c9d42a",
+        color: "#fef3c7",
         borderRadius: "0",
         fontFamily: "'Press Start 2P', cursive",
         "&:hover": {
-          boxShadow: "inset -6px -6px 0px 0px #3f3f46",
-          color: "$pixel",
+          boxShadow:
+            "inset -6px -6px 0px 0px rgba(24, 120, 15, 0.7), 0 0 24px -10px rgba(251, 237, 36, 0.8)",
+          color: "#fef9c3",
         },
+      },
+    },
+  },
+});
+
+const PortalVisual = styled("div", {
+  width: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: "$4",
+});
+
+const PortalIcon = styled("img", {
+  width: "104px",
+  height: "104px",
+  objectFit: "contain",
+  objectPosition: "center",
+  filter: "drop-shadow(0 8px 12px rgba(23, 80, 212, 0.22))",
+
+  variants: {
+    accent: {
+      consultoria: {
+        filter: "drop-shadow(0 10px 16px rgba(15, 23, 42, 0.35))",
+      },
+      axis: {
+        filter: "drop-shadow(0 10px 16px rgba(123, 37, 235, 0.35))",
+      },
+      pixel: {
+        // Keep the wrap background visually pure black with no blue cast.
+        filter: "none",
+      },
+    },
+  },
+
+  "@md": {
+    width: "122px",
+    height: "122px",
+  },
+});
+
+const PortalIconWrap = styled("div", {
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "$3",
+  borderRadius: "14px",
+  border: "1px solid transparent",
+
+  variants: {
+    accent: {
+      consultoria: {
+        background:
+          "linear-gradient(145deg, #0f172a 0%, #1e293b 55%, #334155 100%)",
+        borderColor: "#64748b",
+      },
+      axis: {
+        background:
+          "linear-gradient(145deg, #f8fafc 0%, #dbeafe 58%, #bfdbfe 100%)",
+        borderColor: "#2A144B",
+      },
+      pixel: {
+        background:
+          "#000000",
+        borderColor: "#fbbf24",
       },
     },
   },
@@ -85,9 +159,9 @@ const PortalHeader = styled("div", {
   letterSpacing: "0.1em",
   variants: {
     accent: {
-      consultoria: { color: "$consultoria" },
-      axis: { color: "$axis" },
-      pixel: { color: "$pixel", fontSize: "$xs" },
+      consultoria: { color: "#0f172a" },
+      axis: { color: "#f8fafc" },
+      pixel: { color: "#fef08a", fontSize: "$xs" },
     },
   },
 });
@@ -99,11 +173,11 @@ const PortalTitle = styled("h2", {
   marginTop: "$4",
   variants: {
     accent: {
-      consultoria: { fontFamily: "'Merriweather', serif", color: "#212529" },
-      axis: { fontFamily: "$mono", color: "white" },
+      consultoria: { fontFamily: "'Merriweather', serif", color: "#111827" },
+      axis: { fontFamily: "$mono", color: "#ffffff" },
       pixel: {
         fontFamily: "'Press Start 2P', cursive",
-        color: "white",
+        color: "#fef9c3",
         textShadow: "2px 2px 0px #000",
         fontSize: "$2xl",
       },
@@ -118,16 +192,22 @@ const verticals = [
     accent: "consultoria" as VerticalAccent,
     label: "01 · Consultoria",
     title: "Consultoria M.A.",
+    icon: "/ma-consultoria.png",
+    iconAlt: "Logo MA Consultoria",
   },
   {
     accent: "axis" as VerticalAccent,
     label: "02 · Produto",
-    title: "Soluções M.A. Axis",
+    title: "M.A. Axis",
+    icon: "/ma-axis.png",
+    iconAlt: "Logo MA Axis",
   },
   {
     accent: "pixel" as VerticalAccent,
     label: "03 · Loja",
     title: "Pixel Vault",
+    icon: "/pixel-vault.png",
+    iconAlt: "Logo Pixel Vault",
   },
 ];
 
@@ -139,14 +219,32 @@ export function HomePage() {
         {verticals.map((v) => {
           return (
             <PortalCard key={v.accent} to={`/${v.accent}`} accent={v.accent}>
+              <PortalVisual>
+                <PortalIconWrap accent={v.accent}>
+                  <PortalIcon
+                    accent={v.accent}
+                    src={v.icon}
+                    alt={v.iconAlt}
+                    loading="lazy"
+                  />
+                </PortalIconWrap>
+                <ArrowUpRight
+                  size={24}
+                  style={{
+                    alignSelf: "flex-start",
+                    color:
+                      v.accent === "consultoria"
+                        ? "#334155"
+                        : v.accent === "axis"
+                          ? "#e2e8f0"
+                          : "#fef08a",
+                  }}
+                />
+              </PortalVisual>
               <div>
                 <PortalHeader accent={v.accent}>{v.label}</PortalHeader>
                 <PortalTitle accent={v.accent}>{v.title}</PortalTitle>
               </div>
-              <ArrowUpRight
-                size={24}
-                style={{ alignSelf: "flex-end", color: "var(--colors-textMuted)" }}
-              />
             </PortalCard>
           );
         })}
