@@ -84,7 +84,7 @@ export function PixelProductDetailPage() {
     <PageContent>
       <Back to="/pixel"><ArrowLeft size={16} /> Voltar para o catálogo</Back>
       <Grid>
-        <Cover>{product.imageEmoji}</Cover>
+        <Cover><img src={product.image_url} alt={product.name} /></Cover>
         <div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             <Badge tone="pixel">{product.category}</Badge>

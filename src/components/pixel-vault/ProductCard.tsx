@@ -39,6 +39,13 @@ const Cover = styled("div", {
   textShadow: "2px 2px 0 #fff",
 });
 
+const CoverImage = styled("img", {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  display: "block",
+});
+
 const Row = styled("div", { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "$2" });
 const Name = styled("h3", {
   fontSize: "$lg",
@@ -61,7 +68,9 @@ const Meta = styled("div", { display: "flex", gap: "$1", flexWrap: "wrap", margi
 export function ProductCard({ product }: { product: PixelProduct }) {
   return (
     <Root to={`/pixel/${product.id}`}>
-      <Cover>{product.imageEmoji}</Cover>
+      <Cover>
+        <CoverImage src={product.image_url} alt={product.name} loading="lazy" />
+      </Cover>
       <Row>
         <Name>{product.name}</Name>
         <Price>{formatBRL(product.price)}</Price>

@@ -133,5 +133,5 @@ export interface PixelProduct {
   material: string;
   dimensions: string;
   stock: number;
-  imageEmoji: string;
+  image_url: string;
 }
