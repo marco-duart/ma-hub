@@ -37,4 +37,16 @@ export const pixelProducts: PixelProduct[] = [
     stock: 1,
     image_url: "/assets/products/3.png",
   },
+  {
+    id: 4,
+    name: "Piramide Head - Silent Hill",
+    category: "Figura Decorativa",
+    price: 85.9,
+    fandom: "Jogo - Silent Hill",
+    description: "Miniatura do Pyramid Head, personagem icônico do jogo Silent Hill. Feito em PLA, com detalhes pintados à mão.",
+    material: "PLA",
+    dimensions: "18 cm",
+    stock: 1,
+    image_url: "/assets/products/4.png",
+  },
 ];
