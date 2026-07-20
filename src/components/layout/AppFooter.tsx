@@ -79,7 +79,7 @@ export function AppFooter() {
         </Socials>
       </Inner>
       <Row>
-        <span>© {new Date().getFullYear()} {user.name}. Todos os direitos reservados.</span>
+        <span>© {new Date().getFullYear()} M.A. Consultoria em Tecnologia Ltda - CNPJ: 61.580.959/0001-38. Todos os direitos reservados.</span>
         <Link to="/">Voltar ao topo</Link>
       </Row>
     </FooterRoot>
