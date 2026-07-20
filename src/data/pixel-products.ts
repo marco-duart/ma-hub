@@ -25,4 +25,16 @@ export const pixelProducts: PixelProduct[] = [
     stock: 1,
     image_url: "/assets/products/2.png",
   },
+  {
+    id: 3,
+    name: "Porta lata - One Piece",
+    category: "Figura Decorativa",
+    price: 74.9,
+    fandom: "Anime - One Piece",
+    description: "Porta lata com tema de One Piece. Feito em PLA, com detalhes pintados à mão.",
+    material: "PLA",
+    dimensions: "16 cm",
+    stock: 1,
+    image_url: "/assets/products/3.png",
+  },
 ];
