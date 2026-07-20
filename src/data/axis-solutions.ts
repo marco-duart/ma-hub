@@ -26,4 +26,34 @@ export const axisSolutions: AxisSolution[] = [
     highlights: ["..."],
     link: "#",
   },
+  {
+    id: 3,
+    name: "Aptivon",
+    tagline: "Gestão de RH nunca foi tão fácil.",
+    description:
+      "Plataforma que simplifica a gestão de recursos humanos, desde recrutamento até avaliação de desempenho.",
+    status: "IN_DEVELOPMENT",
+    technologies: ["Ruby on Rails", "ReactJs", "PostgreSQL"],
+    highlights: [
+      "Testes customizados",
+      "Gestão de desempenho simplificada",
+      "Relatórios detalhados para a equipe de RH",
+    ],
+    link: "#",
+  },
+  {
+    id: 4,
+    name: "Convera",
+    tagline: "Todo controle a partir do Whatsapp do seu negócio.",
+    description:
+      "ERP orientado a conversas Whatsapp, onde é gerado todo o controle do seu negócio.",
+    status: "IN_DEVELOPMENT",
+    technologies: ["Ruby on Rails", "NextJs", "PostgreSQL"],
+    highlights: [
+      "Controle financeiro integrado",
+      "Gestão de estoque simplificada",
+      "Relatórios detalhados para o gestor",
+    ],
+    link: "#",
+  },
 ];
