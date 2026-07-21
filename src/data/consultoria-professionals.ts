@@ -87,4 +87,32 @@ export const consultoriaProfessionals: ConsultoriaProfessional[] = [
       whatsapp: "https://wa.me/5562993420588",
     },
   },
+  {
+    id: 4,
+    name: "Fabio Tiago Vieira Soares Marques",
+    photoUrl: "/assets/professionals/fabio.jpeg",
+    roleTitle: "Back-end Developer",
+    problemSolverTagline:
+      "Desenvolvo soluções back-end escaláveis, integrando regras de negócio, APIs e bancos de dados para transformar desafios complexos em sistemas confiáveis.",
+    specialtiesSummary:
+      "Atuo no desenvolvimento de aplicações back-end, com experiência em modelagem de dados, criação de APIs, integrações entre sistemas e manutenção de aplicações em produção. Tenho foco na construção de soluções robustas, performance de consultas, qualidade de código e evolução contínua da arquitetura dos sistemas.",
+    curriculumValueNote:
+      "Meu objetivo é criar software que gere valor real para o negócio, combinando boas práticas de desenvolvimento, organização técnica e foco na entrega de soluções sustentáveis.",
+    mainActingAreas: [
+      "Arquitetura de software",
+      "Desenvolvimento Back-end",
+      "Modelagem e otimização de bancos de dados",
+      "Automacao de processos e regras de negócio",
+    ],
+    strongPoints: [
+      "Análise e resolução de problemas complexos",
+      "Comunicacao clara entre area tecnica e stakeholders",
+      "Trabalho em equipe e comunicação técnica",
+    ],
+    contactLinks: {
+      linkedin: "www.linkedin.com/in/fabio-tiago-marques",
+      github: "https://github.com/fabiotvsm",
+      whatsapp: "https://wa.me/5562991317582",
+    },
+  },
 ];
