@@ -49,7 +49,7 @@ export function Home() {
       <section className="hero">
         <div className="container hero__grid">
           <div>
-            <span className="eyebrow">M.A. Axis · sistemas em português</span>
+            <span className="eyebrow">M.A. Axis · soluções digitais</span>
             <h1 className="hero-words" style={{ marginTop: 22 }}>
               <span className="w1">Mostre.</span> <span className="w2">Atenda.</span> <span className="w3">Contrate.</span> <span className="w4">Organize.</span>
             </h1>
