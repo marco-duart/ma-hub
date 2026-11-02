@@ -1,27 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
 import { App } from "./App";
-import { globalStyles } from "./theme/stitches.config";
+import "./styles/tokens.css";
+import "./styles/base.css";
+import "./styles/layout.css";
+import "./styles/ui.css";
+import "./styles/pages.css";
 
-globalStyles();
+// O HTML pré-renderizado já traz título e metadados da rota (para quem não executa JS). Ao subir o React, o componente <Seo>
+// passa a cuidar deles; tirar os estáticos evita tags duplicadas no DOM.
+document.querySelectorAll('title, meta[name="description"], meta[name="robots"], link[rel="canonical"], meta[property^="og:"], meta[name^="twitter:"]').forEach((el) => el.remove());
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
     <BrowserRouter>
       <App />
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          style: {
-            background: "#181b23",
-            color: "#e9edf5",
-            border: "1px solid #262a35",
-            fontFamily: "Inter, system-ui, sans-serif",
-          },
-        }}
-      />
     </BrowserRouter>
-  </React.StrictMode>,
+  </StrictMode>,
 );
