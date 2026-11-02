@@ -1,0 +1,47 @@
+{
+  "/": {
+    "title": "M.A. Axis | Dita, MostraAi, Rasttro e Profyla",
+    "description": "Sistemas para quem empreende, contrata e vive a estrada: Dita (atendimento e pedidos no WhatsApp), MostraAi (cardápio no QR Code), Profyla (recrutamento) e Rasttro (motoclubes). Apps no Google Play.",
+    "image": "/img/og/home.jpg"
+  },
+  "/dita": {
+    "title": "Dita: atendimento e pedidos no WhatsApp com IA | M.A. Axis",
+    "description": "O Dita atende seus clientes no WhatsApp com o seu catálogo, monta o pedido, acompanha a cobrança e chama você quando a conversa precisa de uma pessoa. Painel no computador e app no Android.",
+    "image": "/img/og/dita.jpg"
+  },
+  "/mostra-ai": {
+    "title": "MostraAi: cardápio, catálogo e agenda no QR Code | M.A. Axis",
+    "description": "Seu cardápio, catálogo ou agenda de serviços no QR Code, com mesas, chamada de garçom e comanda digital. Apps para o lojista, o cliente e o garçom, no Google Play.",
+    "image": "/img/og/mostra-ai.jpg"
+  },
+  "/rasttro": {
+    "title": "Rasttro: gestão completa para motoclubes | M.A. Axis",
+    "description": "Membros, mensalidades, reuniões, eventos, comboios e carteirinha digital do seu motoclube, no painel da diretoria e no app do integrante.",
+    "image": "/img/og/rasttro.jpg"
+  },
+  "/profyla": {
+    "title": "Profyla: recrutamento com perfis completos | M.A. Axis",
+    "description": "Currículo, testes DISC e Eneagrama, kanban do processo seletivo e entrevistas em um só lugar. Site para recrutadores e candidatos, app Android para o candidato.",
+    "image": "/img/og/profyla.jpg"
+  },
+  "/apps": {
+    "title": "Baixe os apps no Google Play | M.A. Axis",
+    "description": "Os seis apps Android da M.A. Axis: Dita, Rasttro, Profyla e os três apps do MostraAi (lojista, cliente e garçom).",
+    "image": "/img/og/home.jpg"
+  },
+  "/contato": {
+    "title": "Contato e como contratar | M.A. Axis",
+    "description": "Fale com a M.A. Axis por e-mail ou Instagram e veja como começar a usar o Dita, o MostraAi, o Rasttro e o Profyla.",
+    "image": "/img/og/home.jpg"
+  },
+  "/privacidade": {
+    "title": "Privacidade deste site | M.A. Axis",
+    "description": "Este site não usa cookies de rastreamento nem coleta dados pessoais. Veja onde ficam as políticas de privacidade de cada sistema.",
+    "image": "/img/og/home.jpg"
+  },
+  "/404": {
+    "title": "Página não encontrada | M.A. Axis",
+    "description": "Esta página não existe. Volte para o início e escolha um dos sistemas da M.A. Axis.",
+    "image": "/img/og/home.jpg"
+  }
+}

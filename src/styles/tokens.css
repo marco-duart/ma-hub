@@ -1,0 +1,41 @@
+:root {
+  --bg: #070914;
+  --bg-2: #0b0f1e;
+  --surface: #10152a;
+  --surface-2: #161c38;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-2: rgba(255, 255, 255, 0.17);
+  --text: #eef1ff;
+  --muted: #a8b0cc;
+  --dim: #7681a3;
+
+  --axis-cyan: #22c8ff;
+  --axis-gold: #e6b33d;
+
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+
+  --maxw: 1200px;
+  --gutter: clamp(18px, 4vw, 40px);
+  --section-y: clamp(64px, 9vw, 120px);
+  --header-h: 68px;
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* cor do sistema da página (cada [data-theme] redefine) */
+  --accent: #8f94ff;
+  --accent-2: #38bdf8;
+  --accent-ink: #060814;
+  --accent-rgb: 143, 148, 255;
+}
+
+/* cores da frase "Mostre. Atenda. Contrate. Organize." */
+[data-theme="mostra"] { --accent: #8f94ff; --accent-2: #38bdf8; --accent-rgb: 143, 148, 255; --accent-ink: #060818; }
+[data-theme="dita"] { --accent: #3ee0c4; --accent-2: #2f8bff; --accent-rgb: 62, 224, 196; --accent-ink: #04141a; }
+[data-theme="profyla"] { --accent: #c084f5; --accent-2: #6a47f5; --accent-rgb: 192, 132, 245; --accent-ink: #12061f; }
+[data-theme="rasttro"] { --accent: #ffa94d; --accent-2: #e8701c; --accent-rgb: 255, 169, 77; --accent-ink: #1a0d02; }
