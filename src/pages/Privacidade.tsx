@@ -14,8 +14,8 @@ export function Privacidade() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="prose">
-            <p>Este site apresenta os sistemas da M.A. Axis ({SITE.legalName}, CNPJ {SITE.cnpj}). Ele <strong style={{ color: "var(--text)" }}>não usa cookies de rastreamento, não tem ferramentas de análise ou publicidade e não coleta dados pessoais</strong>. Não há formulários: o contato é feito por e-mail ou Instagram, fora do site.</p>
-            <p>Os links para o Google Play, para o Instagram e para os painéis de cada sistema levam a serviços de terceiros, que têm as suas próprias políticas.</p>
+            <p>Este site apresenta os sistemas da M.A. Axis ({SITE.legalName}, CNPJ {SITE.cnpj}). Ele <strong style={{ color: "var(--text)" }}>não usa cookies de rastreamento, não tem ferramentas de análise ou publicidade e não coleta dados pessoais</strong>. Não há formulários: o contato é feito por WhatsApp, e-mail ou Instagram, fora do site.</p>
+            <p>Os links para o Google Play, para o WhatsApp, para o Instagram e para os painéis de cada sistema levam a serviços de terceiros, que têm as suas próprias políticas.</p>
             <h2>Políticas de cada sistema</h2>
             <p>Quando você usa o Dita, o MostraAi, o Rasttro ou o Profyla, os dados são tratados conforme a política de cada sistema:</p>
             <ul className="ticks">

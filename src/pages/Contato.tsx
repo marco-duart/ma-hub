@@ -2,8 +2,8 @@ import { ArrowRight, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Seo } from "@/components/Seo";
 import { Reveal } from "@/components/Reveal";
-import { InstagramIcon, SectionHead } from "@/components/Parts";
-import { SITE, SYSTEMS, mailto } from "@/site";
+import { InstagramIcon, SectionHead, WhatsAppIcon } from "@/components/Parts";
+import { SITE, SYSTEMS, mailto, whatsappUrl } from "@/site";
 
 const HOW: Record<string, { title: string; text: string; cta: string; subject: string }> = {
   "mostra-ai": { title: "Você mesmo cria a loja", text: "Baixe o app do lojista, toque em “Criar minha loja” e responda uma pergunta por vez. Comece no plano Free.", cta: "Dúvidas sobre o MostraAi", subject: "Dúvidas sobre o MostraAi" },
@@ -20,9 +20,10 @@ export function Contato() {
         <div className="container">
           <span className="eyebrow">Contato</span>
           <h1 style={{ marginTop: 22 }}>Vamos <span className="grad-text">conversar?</span></h1>
-          <p className="hero__sub">Dúvidas, demonstração ou contratação: escreva por e-mail ou chame no Instagram.</p>
+          <p className="hero__sub">Dúvidas, demonstração ou contratação: chame no WhatsApp de atendimento M.A. Axis, escreva por e-mail ou fale pelo Instagram.</p>
           <div className="btn-row">
-            <a className="btn btn--primary" href={mailto("Quero conhecer os sistemas da M.A. Axis")}><Mail size={18} /> {SITE.email}</a>
+            <a className="btn btn--primary" href={whatsappUrl("Olá! Quero falar com o atendimento da M.A. Axis.")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon /> WhatsApp {SITE.whatsapp.label}</a>
+            <a className="btn btn--ghost" href={mailto("Quero conhecer os sistemas da M.A. Axis")}><Mail size={18} /> {SITE.email}</a>
             <a className="btn btn--ghost" href={SITE.instagram.url} target="_blank" rel="noopener noreferrer"><InstagramIcon /> {SITE.instagram.handle}</a>
           </div>
         </div>
@@ -64,6 +65,7 @@ export function Contato() {
               <ul className="ticks">
                 <li><strong>{SITE.legalName}</strong> (M.A. Axis)</li>
                 <li>CNPJ <strong>{SITE.cnpj}</strong></li>
+                <li>WhatsApp (atendimento M.A. Axis) <a href={whatsappUrl("Olá! Quero falar com o atendimento da M.A. Axis.")} target="_blank" rel="noopener noreferrer"><strong>{SITE.whatsapp.full}</strong></a></li>
                 <li>E-mail <a href={`mailto:${SITE.email}`}><strong>{SITE.email}</strong></a></li>
                 <li>Instagram <a href={SITE.instagram.url} target="_blank" rel="noopener noreferrer"><strong>{SITE.instagram.handle}</strong></a></li>
               </ul>

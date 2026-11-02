@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { ArrowUpRight, ChevronDown, Menu, Mail, X } from "lucide-react";
-import { APPS, NAV, SITE, SYSTEMS, mailto } from "@/site";
-import { InstagramIcon } from "./Parts";
+import { APPS, NAV, SITE, SYSTEMS, mailto, whatsappUrl } from "@/site";
+import { InstagramIcon, WhatsAppIcon } from "./Parts";
 import { ScrollManager } from "./ScrollManager";
 import { LightboxProvider } from "./Lightbox";
 
@@ -112,6 +112,7 @@ function Footer() {
           <div>
             <h4>Contato</h4>
             <ul>
+              <li><a href={whatsappUrl("Olá! Quero falar com o atendimento da M.A. Axis.")} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", gap: 8, alignItems: "center" }}><WhatsAppIcon size={17} /> {SITE.whatsapp.label} <span style={{ color: "var(--dim)" }}>(atendimento M.A. Axis)</span></a></li>
               <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
               <li><a href={SITE.instagram.url} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", gap: 8, alignItems: "center" }}><InstagramIcon size={17} /> {SITE.instagram.handle}</a></li>
               <li><a href={SITE.forja.url} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", gap: 8, alignItems: "center" }}><InstagramIcon size={17} /> {SITE.forja.handle} <span style={{ color: "var(--dim)" }}>(impressão 3D)</span></a></li>

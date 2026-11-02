@@ -3,8 +3,8 @@ import { ArrowRight, ArrowUpRight, BriefcaseBusiness, Mail, Store, Bike } from "
 import { Seo } from "@/components/Seo";
 import { Reveal } from "@/components/Reveal";
 import { Phone, Marquee } from "@/components/Media";
-import { InstagramIcon, SectionHead } from "@/components/Parts";
-import { APPS, SITE, SYSTEMS, mailto, systemByKey } from "@/site";
+import { InstagramIcon, SectionHead, WhatsAppIcon } from "@/components/Parts";
+import { APPS, SITE, SYSTEMS, mailto, systemByKey, whatsappUrl } from "@/site";
 
 const PRODUCT_COPY: Record<string, { ticks: string[]; shots: [string, string] }> = {
   "mostra-ai": {
@@ -224,7 +224,8 @@ export function Home() {
               <p>Conte o que você faz e a gente mostra qual sistema ajuda mais. Contratação, dúvidas e demonstração: é só chamar.</p>
             </div>
             <div className="cta-band__actions">
-              <a className="btn btn--primary" href={mailto("Quero conhecer os sistemas da M.A. Axis")}><Mail size={18} /> {SITE.email}</a>
+              <a className="btn btn--primary" href={whatsappUrl("Olá! Quero falar com o atendimento da M.A. Axis.")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon /> WhatsApp {SITE.whatsapp.label}</a>
+              <a className="btn btn--ghost" href={mailto("Quero conhecer os sistemas da M.A. Axis")}><Mail size={18} /> {SITE.email}</a>
               <a className="btn btn--ghost" href={SITE.instagram.url} target="_blank" rel="noopener noreferrer"><InstagramIcon /> {SITE.instagram.handle}</a>
               <Link className="btn btn--ghost" to="/apps">Ver os apps no Google Play</Link>
             </div>

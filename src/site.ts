@@ -6,12 +6,21 @@ export const SITE = {
   cnpj: "61.580.959/0001-38",
   email: "maaxis.tech@gmail.com",
   url: "https://www.ma-axis.com.br",
+  whatsapp: {
+    phone: "5562994069668",
+    label: "(62) 99406-9668",
+    full: "+55 (62) 99406-9668",
+    url: "https://wa.me/5562994069668",
+  },
   instagram: { handle: "@maaxis.tech", url: "https://www.instagram.com/maaxis.tech/" },
   forja: { handle: "@forjamithril.3d", url: "https://www.instagram.com/forjamithril.3d/" },
 } as const;
 
 export const mailto = (subject: string): string =>
   `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`;
+
+export const whatsappUrl = (text?: string): string =>
+  text ? `${SITE.whatsapp.url}?text=${encodeURIComponent(text)}` : SITE.whatsapp.url;
 
 const play = (id: string): string => `https://play.google.com/store/apps/details?id=${id}`;
 
