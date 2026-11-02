@@ -60,7 +60,7 @@ export function Tabs({ tabs, label, initial }: { tabs: readonly TabDef[]; label:
   const refs = useRef<Record<string, HTMLButtonElement | null>>({});
   const onKey = (e: KeyboardEvent) => {
     const i = tabs.findIndex((t) => t.id === active);
-    let n = i;
+    let n: number;
     if (e.key === "ArrowRight") n = (i + 1) % tabs.length;
     else if (e.key === "ArrowLeft") n = (i - 1 + tabs.length) % tabs.length;
     else if (e.key === "Home") n = 0;
