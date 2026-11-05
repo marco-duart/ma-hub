@@ -1,17 +1,17 @@
 {
   "/": {
-    "title": "M.A. Axis | Dita, MostraAi, Rasttro e Profyla",
-    "description": "Sistemas para o comércio e soluções sob medida com preço que cabe no seu bolso: Dita (atendimento e pedidos no WhatsApp), MostraAi (cardápio no QR Code), Profyla (recrutamento) e Rasttro (motoclubes). Implantação e suporte de perto.",
+    "title": "Sistemas de gestão para pequenos negócios em Goiânia | M.A. Axis",
+    "description": "Organize pedidos, clientes, vendas e atendimento do seu comércio com sistemas prontos ou sob medida, com implantação e suporte de perto em Goiânia, Aparecida, Senador Canedo e Trindade.",
     "image": "/img/og/home.jpg"
   },
   "/dita": {
     "title": "Dita: atendimento e pedidos no WhatsApp com IA | M.A. Axis",
-    "description": "O Dita atende seus clientes no WhatsApp com o seu catálogo, monta o pedido, acompanha a cobrança e chama você quando a conversa precisa de uma pessoa. Painel no computador e app no Android.",
+    "description": "O Dita atende seus clientes no WhatsApp com o seu catálogo, monta o pedido, acompanha a cobrança e chama você quando precisa. Implantação e suporte de perto em Goiânia e região.",
     "image": "/img/og/dita.jpg"
   },
   "/mostra-ai": {
     "title": "MostraAi: cardápio, catálogo e agenda no QR Code | M.A. Axis",
-    "description": "Seu cardápio, catálogo ou agenda de serviços no QR Code, com mesas, chamada de garçom e comanda digital. Apps para o lojista, o cliente e o garçom, no Google Play.",
+    "description": "Cardápio, catálogo ou agenda de serviços no QR Code, com mesas, chamada de garçom e comanda digital. Plano gratuito para começar e ajuda na implantação em Goiânia e região.",
     "image": "/img/og/mostra-ai.jpg"
   },
   "/rasttro": {
@@ -30,13 +30,13 @@
     "image": "/img/og/home.jpg"
   },
   "/contato": {
-    "title": "Contato e como contratar | M.A. Axis",
-    "description": "Fale com a M.A. Axis pelo WhatsApp, e-mail ou Instagram. Soluções sob medida com preço que cabe no bolso do comércio, com implantação e suporte de perto.",
+    "title": "Fale com a M.A. Axis pelo WhatsApp | Goiânia e região",
+    "description": "Agende uma conversa ou visita no seu comércio em Goiânia, Aparecida de Goiânia, Senador Canedo ou Trindade. Orçamento sem compromisso, implantação e suporte de perto.",
     "image": "/img/og/home.jpg"
   },
   "/privacidade": {
     "title": "Privacidade deste site | M.A. Axis",
-    "description": "Este site não usa cookies de rastreamento nem coleta dados pessoais. Veja onde ficam as políticas de privacidade de cada sistema.",
+    "description": "Como este site mede a audiência com o Google Analytics, sem anúncios e sem formulários, e onde ficam as políticas de privacidade de cada sistema.",
     "image": "/img/og/home.jpg"
   },
   "/404": {

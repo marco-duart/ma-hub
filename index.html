@@ -3,10 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- Google Tag Manager (GTM-WKMC43GV) + Google Analytics 4 (G-42CM6T91MQ). Só no domínio de produção:
+         localhost e as prévias da Vercel não contam visita. O GA4 é carregado aqui; NÃO crie no GTM outra tag
+         do Google com o mesmo G-42CM6T91MQ, senão cada visita conta duas vezes. -->
+    <script>
+      (function (w, d) {
+        if (!/(^|\.)ma-axis\.com\.br$/.test(w.location.hostname)) return;
+        w.dataLayer = w.dataLayer || [];
+        function gtag() { w.dataLayer.push(arguments); }
+        w.gtag = gtag;
+        // site sem anúncios: só medição de audiência
+        gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted" });
+        gtag("js", new Date());
+        gtag("config", "G-42CM6T91MQ");
+        w.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        function load(src) { var s = d.createElement("script"); s.async = true; s.src = src; d.head.appendChild(s); }
+        load("https://www.googletagmanager.com/gtm.js?id=GTM-WKMC43GV");
+        load("https://www.googletagmanager.com/gtag/js?id=G-42CM6T91MQ");
+      })(window, document);
+    </script>
     <meta name="theme-color" content="#070914" />
     <meta name="color-scheme" content="dark" />
-    <title>M.A. Axis | Dita, MostraAi, Rasttro e Profyla</title>
-    <meta name="description" content="Sistemas para o comércio e soluções sob medida com preço que cabe no seu bolso: Dita (atendimento e pedidos no WhatsApp), MostraAi (cardápio no QR Code), Profyla (recrutamento) e Rasttro (motoclubes). Implantação e suporte de perto." />
+    <title>Sistemas de gestão para pequenos negócios em Goiânia | M.A. Axis</title>
+    <meta name="description" content="Organize pedidos, clientes, vendas e atendimento do seu comércio com sistemas prontos ou sob medida, com implantação e suporte de perto em Goiânia, Aparecida, Senador Canedo e Trindade." />
     <link rel="canonical" href="https://www.ma-axis.com.br/" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="256x256" href="/favicon.png" />
@@ -15,14 +34,14 @@
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ma-axis.com.br/" />
-    <meta property="og:title" content="M.A. Axis | Dita, MostraAi, Rasttro e Profyla" />
-    <meta property="og:description" content="Sistemas para o comércio e soluções sob medida com preço que cabe no seu bolso: Dita (atendimento e pedidos no WhatsApp), MostraAi (cardápio no QR Code), Profyla (recrutamento) e Rasttro (motoclubes). Implantação e suporte de perto." />
+    <meta property="og:title" content="Sistemas de gestão para pequenos negócios em Goiânia | M.A. Axis" />
+    <meta property="og:description" content="Organize pedidos, clientes, vendas e atendimento do seu comércio com sistemas prontos ou sob medida, com implantação e suporte de perto em Goiânia, Aparecida, Senador Canedo e Trindade." />
     <meta property="og:image" content="https://www.ma-axis.com.br/img/og/home.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="M.A. Axis | Dita, MostraAi, Rasttro e Profyla" />
-    <meta name="twitter:description" content="Sistemas para o comércio e soluções sob medida com preço que cabe no seu bolso: Dita (atendimento e pedidos no WhatsApp), MostraAi (cardápio no QR Code), Profyla (recrutamento) e Rasttro (motoclubes). Implantação e suporte de perto." />
+    <meta name="twitter:title" content="Sistemas de gestão para pequenos negócios em Goiânia | M.A. Axis" />
+    <meta name="twitter:description" content="Organize pedidos, clientes, vendas e atendimento do seu comércio com sistemas prontos ou sob medida, com implantação e suporte de perto em Goiânia, Aparecida, Senador Canedo e Trindade." />
     <meta name="twitter:image" content="https://www.ma-axis.com.br/img/og/home.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,15 +52,112 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "M.A. Axis",
-        "legalName": "Maaxis",
-        "url": "https://www.ma-axis.com.br/",
-        "logo": "https://www.ma-axis.com.br/logo.png",
-        "email": "maaxis.tech@gmail.com",
-        "telephone": "+55-62-99406-9668",
-        "taxID": "61.580.959/0001-38",
-        "sameAs": ["https://www.instagram.com/maaxis.tech/"]
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://www.ma-axis.com.br/#empresa",
+            "name": "M.A. Axis",
+            "alternateName": "Maaxis",
+            "legalName": "Maaxis",
+            "description": "Consultoria, implantação e suporte de sistemas de gestão e automação para pequenos negócios.",
+            "url": "https://www.ma-axis.com.br/",
+            "logo": "https://www.ma-axis.com.br/logo.png",
+            "image": "https://www.ma-axis.com.br/img/og/home.jpg",
+            "email": "maaxis.tech@gmail.com",
+            "telephone": "+55-62-99406-9668",
+            "taxID": "61.580.959/0001-38",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Goiânia",
+              "addressRegion": "GO",
+              "addressCountry": "BR"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Goiânia",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Goiás"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Aparecida de Goiânia",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Goiás"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Senador Canedo",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Goiás"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Trindade",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Goiás"
+                }
+              }
+            ],
+            "knowsAbout": [
+              "sistema de gestão para pequenos negócios",
+              "atendimento automatizado no WhatsApp",
+              "cardápio digital com QR Code",
+              "automação comercial",
+              "recrutamento e seleção"
+            ],
+            "makesOffer": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Consultoria em tecnologia para pequenos negócios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Implantação de sistemas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Suporte e acompanhamento"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Desenvolvimento de sistemas sob medida"
+                }
+              }
+            ],
+            "sameAs": [
+              "https://www.instagram.com/maaxis.tech/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.ma-axis.com.br/#site",
+            "url": "https://www.ma-axis.com.br/",
+            "name": "M.A. Axis",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://www.ma-axis.com.br/#empresa"
+            }
+          }
+        ]
       }
     </script>
     <script>
@@ -49,10 +165,11 @@
     </script>
   </head>
   <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKMC43GV" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
     <div id="root"></div>
     <noscript>
       <p style="padding:24px;font-family:system-ui;color:#eef1ff">
-        M.A. Axis: Dita, MostraAi, Rasttro e Profyla. Este site precisa de JavaScript. Fale com a gente pelo WhatsApp
+        M.A. Axis: sistemas, implantação e suporte para pequenos negócios em Goiânia, Aparecida de Goiânia, Senador Canedo e Trindade. Este site precisa de JavaScript. Fale com a gente pelo WhatsApp
         +55 (62) 99406-9668, em maaxis.tech@gmail.com ou no Instagram @maaxis.tech.
       </p>
     </noscript>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.ma-axis.com.br/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.ma-axis.com.br/dita</loc><priority>0.9</priority></url>
-  <url><loc>https://www.ma-axis.com.br/mostra-ai</loc><priority>0.9</priority></url>
-  <url><loc>https://www.ma-axis.com.br/rasttro</loc><priority>0.9</priority></url>
-  <url><loc>https://www.ma-axis.com.br/profyla</loc><priority>0.9</priority></url>
-  <url><loc>https://www.ma-axis.com.br/apps</loc><priority>0.8</priority></url>
-  <url><loc>https://www.ma-axis.com.br/contato</loc><priority>0.7</priority></url>
-  <url><loc>https://www.ma-axis.com.br/privacidade</loc><priority>0.3</priority></url>
+  <url><loc>https://www.ma-axis.com.br/</loc><lastmod>2026-11-05</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.ma-axis.com.br/dita</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.ma-axis.com.br/mostra-ai</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.ma-axis.com.br/rasttro</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.ma-axis.com.br/profyla</loc><lastmod>2026-11-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.ma-axis.com.br/apps</loc><lastmod>2026-11-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.ma-axis.com.br/contato</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.ma-axis.com.br/privacidade</loc><lastmod>2026-11-05</lastmod><priority>0.3</priority></url>
 </urlset>

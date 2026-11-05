@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, BriefcaseBusiness, HeartHandshake, LifeBuoy, Mail, PiggyBank, Store, Bike } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BriefcaseBusiness, HeartHandshake, LifeBuoy, Mail, MapPin, PiggyBank, Store, Bike } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Reveal } from "@/components/Reveal";
 import { Phone, Marquee } from "@/components/Media";
-import { InstagramIcon, SectionHead, WhatsAppIcon } from "@/components/Parts";
+import { Faq, InstagramIcon, SectionHead, WhatsAppIcon } from "@/components/Parts";
 import { APPS, SITE, SYSTEMS, mailto, systemByKey, whatsappUrl } from "@/site";
 
 const PRODUCT_COPY: Record<string, { ticks: string[]; shots: [string, string] }> = {
@@ -40,6 +40,32 @@ const STRIP = [
   { to: "/rasttro", theme: "rasttro", verb: "Organize", src: "/img/rasttro/m-comboio.webp", alt: "Rasttro: comboio com ponto de encontro e paradas", label: "Comboio" },
 ];
 
+const PAINS = [
+  { q: "Estou perdendo pedidos no WhatsApp", a: "O Dita responde na hora, monta o pedido e chama você quando precisa.", theme: "dita" },
+  { q: "Não consigo acompanhar meus clientes", a: "Ficha de cada cliente com pedidos, parcelas e conversas, num lugar só.", theme: "dita" },
+  { q: "A cobrança vive no caderninho", a: "Parcelas com vencimento, lembrete antes de vencer e cobrança do que atrasou.", theme: "dita" },
+  { q: "Meu cardápio e meus preços estão sempre desatualizados", a: "Cardápio ou catálogo no QR Code, que você atualiza pelo celular.", theme: "mostra" },
+  { q: "Queria organizar mesas, agenda e atendimento", a: "Mesas com chamada de garçom, comanda digital e agenda de serviços.", theme: "mostra" },
+  { q: "Tenho uma ideia, mas não sei qual tecnologia usar", a: "A gente conversa, e eu indico, adapto ou crio a solução do seu tamanho.", theme: "profyla" },
+];
+
+const CITIES = ["Goiânia", "Aparecida de Goiânia", "Senador Canedo", "Trindade"];
+
+const FAQ = [
+  { q: "Preciso entender de tecnologia para contratar?", a: "Não. Você me conta o que quer melhorar no negócio, e eu cuido da parte técnica: escolha da solução, configuração, cadastro e treinamento." },
+  { q: "Quanto custa?", a: "Depende do que o seu negócio precisa. As soluções prontas têm planos mensais acessíveis, e o MostraAi tem plano gratuito para começar. Personalizações recebem um orçamento antes, sem compromisso." },
+  { q: "O que está incluído no acompanhamento?", a: "Na contratação combinamos o que entra: configuração inicial, cadastro dos produtos, treinamento e suporte pelo WhatsApp. Ajustes maiores e desenvolvimento sob medida são orçados à parte, sem surpresa." },
+  { q: "Vocês atendem a minha cidade?", a: "Atendo presencialmente em Goiânia, Aparecida de Goiânia, Senador Canedo e Trindade. Os sistemas funcionam pela internet, no celular e no computador." },
+  { q: "Meu comércio é pequeno. Vale a pena?", a: "Vale. As soluções foram feitas para o pequeno negócio: começam simples, com o que você mais precisa, e crescem junto com você." },
+  { q: "Preciso trocar meu número de WhatsApp?", a: "Não. O Dita conecta como o WhatsApp Web e o seu celular continua funcionando normalmente." },
+];
+
+const FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+};
+
 export function Home() {
   return (
     <main id="conteudo">
@@ -49,21 +75,24 @@ export function Home() {
       <section className="hero">
         <div className="container hero__grid">
           <div>
-            <span className="eyebrow">M.A. Axis · soluções digitais</span>
-            <h1 className="hero-words" style={{ marginTop: 22 }}>
-              <span className="w1">Mostre.</span> <span className="w2">Atenda.</span> <span className="w3">Contrate.</span> <span className="w4">Organize.</span>
+            <span className="eyebrow">Goiânia, Aparecida, Senador Canedo e Trindade</span>
+            <h1 className="hero-title" style={{ marginTop: 22 }}>
+              Tecnologia e acompanhamento para <span className="grad-text">organizar o seu negócio</span>
             </h1>
+            <p className="hero-words hero-words--tagline" aria-hidden="true">
+              <span className="w1">Mostre.</span> <span className="w2">Atenda.</span> <span className="w3">Contrate.</span> <span className="w4">Organize.</span>
+            </p>
             <p className="hero__sub">
-              Quatro sistemas para quem empreende, contrata e vive a estrada: do cardápio no QR Code ao atendimento no WhatsApp, do recrutamento ao motoclube. Painel na web e app no celular.
+              A Maaxis ajuda pequenos comércios a organizar pedidos, clientes, vendas e atendimento com sistemas e automações do tamanho do negócio. Da escolha da ferramenta à implantação e ao suporte, você tem apoio de perto, sem precisar entender de tecnologia.
             </p>
             <div className="btn-row">
-              <a className="btn btn--primary" href="#sistemas">Conhecer os sistemas <ArrowRight size={18} /></a>
-              <Link className="btn btn--ghost" to="/apps">Baixar os apps</Link>
+              <a className="btn btn--primary" href={whatsappUrl("Olá! Quero organizar o meu negócio com a Maaxis. Podemos conversar?")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon /> Conversar pelo WhatsApp</a>
+              <a className="btn btn--ghost" href="#como-ajudamos">Como funciona <ArrowRight size={18} /></a>
             </div>
             <div className="chips hero__meta">
-              <span className="chip">Dita</span><span className="chip">MostraAi</span><span className="chip">Profyla</span><span className="chip">Rasttro</span>
-              <span className="chip chip--accent">6 apps no Google Play</span>
-              <a className="chip chip--accent" href="#sob-medida">Sob medida, com preço que cabe no bolso</a>
+              <span className="chip chip--accent">Sem precisar entender de tecnologia</span>
+              <a className="chip chip--accent" href="#sob-medida">Preço que cabe no bolso</a>
+              <span className="chip">Implantação e suporte de perto</span>
             </div>
           </div>
           <div className="fan" aria-label="Telas dos quatro sistemas">
@@ -75,11 +104,28 @@ export function Home() {
         </div>
       </section>
 
+      {/* ---------- o problema, nas palavras do comerciante ---------- */}
+      <section className="section section--alt" id="problemas">
+        <div className="container">
+          <SectionHead eyebrow="Isso soa familiar?" title="Você não precisa saber qual sistema contratar. Só o que quer melhorar." center>
+            Você entende do seu negócio. A Maaxis traduz o problema do dia a dia em uma solução que funciona na sua rotina.
+          </SectionHead>
+          <div className="pains">
+            {PAINS.map((p, i) => (
+              <Reveal key={p.q} className="pain" delay={(i % 3) * 70} data-theme={p.theme}>
+                <p className="pain__q">“{p.q}”</p>
+                <p className="pain__a">{p.a}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- sistemas ---------- */}
       <section className="section" id="sistemas">
         <div className="container">
-          <SectionHead eyebrow="Os sistemas" title={<>Um para cada jeito de <span className="grad-text">fazer acontecer</span></>}>
-            Cada sistema resolve um problema do dia a dia e tem página própria, com tudo o que ele faz, as telas reais e como começar.
+          <SectionHead eyebrow="Soluções prontas" title={<>Ferramentas próprias, <span className="grad-text">prontas para começar</span></>}>
+            Os sistemas da Maaxis são a base: eu escolho com você o que faz sentido, adapto e implanto. Cada um tem página própria, com o que faz, as telas reais e como começar.
           </SectionHead>
           <div className="grid-2">
             {SYSTEMS.map((s, i) => {
@@ -148,8 +194,23 @@ export function Home() {
         </div>
       </section>
 
+      {/* ---------- como ajudamos: diagnóstico, escolha, implantação, acompanhamento ---------- */}
+      <section className="section" id="como-ajudamos">
+        <div className="container">
+          <SectionHead eyebrow="Como a Maaxis ajuda" title={<>Não é só um sistema. <span className="grad-text">É alguém do seu lado.</span></>}>
+            Sistema barato que ninguém consegue usar não resolve nada. Por isso a implantação e o acompanhamento fazem parte do que você contrata.
+          </SectionHead>
+          <div className="steps">
+            <Reveal className="step"><h3>Entendo o seu negócio</h3><p>Vou até o seu comércio ou conversamos pelo WhatsApp. Você conta a rotina, e eu vejo onde o tempo e o dinheiro escapam.</p></Reveal>
+            <Reveal className="step" delay={80}><h3>Indico a solução certa</h3><p>Sem termos técnicos: mostro o que resolve o seu problema, com um orçamento do tamanho do negócio.</p></Reveal>
+            <Reveal className="step" delay={160}><h3>Implanto e ensino</h3><p>Configuro, cadastro os seus produtos, conecto o WhatsApp e treino você e a sua equipe.</p></Reveal>
+            <Reveal className="step" delay={240}><h3>Acompanho de perto</h3><p>Depois de começar, sigo do seu lado para dúvidas e ajustes, com suporte direto comigo.</p></Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* ---------- sob medida, preço de comércio ---------- */}
-      <section className="section" id="sob-medida">
+      <section className="section" id="sob-medida" style={{ paddingTop: 0 }}>
         <div className="container">
           <SectionHead eyebrow="Sob medida" title={<>Do jeito do seu negócio, com um preço que <span className="grad-text">cabe no seu bolso</span></>}>
             Comércio pequeno não precisa de sistema caro nem complicado. Eu parto das soluções prontas e ajusto à sua rotina, ou crio algo só seu, sempre com um orçamento do tamanho do seu negócio.
@@ -171,15 +232,32 @@ export function Home() {
               <p>Depois que você começa, eu sigo do seu lado para dúvidas, ajustes e novas ideias. O sistema cresce junto com o seu negócio.</p>
             </Reveal>
           </div>
-          <div className="steps" style={{ marginTop: "clamp(28px,4vw,44px)" }}>
-            <Reveal className="step"><h3>Conversa</h3><p>Você me conta como funciona o seu dia e onde o tempo e o dinheiro escapam.</p></Reveal>
-            <Reveal className="step" delay={80}><h3>Proposta do seu tamanho</h3><p>Eu sugiro a solução e o valor que fazem sentido para o seu comércio.</p></Reveal>
-            <Reveal className="step" delay={160}><h3>Eu configuro e ensino</h3><p>Deixo tudo pronto com os seus produtos e treino quem vai usar.</p></Reveal>
-            <Reveal className="step" delay={240}><h3>Acompanho de perto</h3><p>Suporte direto comigo, com ajustes sempre que o negócio pedir.</p></Reveal>
-          </div>
           <div className="btn-row" style={{ marginTop: 32 }}>
             <a className="btn btn--primary" href={whatsappUrl("Olá! Quero uma solução do jeito do meu negócio. Pode me passar um orçamento?")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon /> Pedir um orçamento sem compromisso</a>
             <Link className="btn btn--ghost" to="/contato">Ver como contratar <ArrowRight size={18} /></Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- região atendida ---------- */}
+      <section className="section section--alt" id="regiao">
+        <div className="container">
+          <div className="grid-2" style={{ alignItems: "center" }}>
+            <div className="frow__text">
+              <span className="eyebrow">Atendimento perto de você</span>
+              <h2 style={{ fontSize: "clamp(30px,4vw,48px)" }}>Goiânia e região, com visita ao seu comércio</h2>
+              <p style={{ color: "var(--muted)", fontSize: 18 }}>
+                Grandes empresas de software atendem de longe. A Maaxis vai até você: observa como o seu negócio funciona, implanta a solução no lugar certo e continua por perto, pelo WhatsApp.
+              </p>
+              <div className="btn-row">
+                <a className="btn btn--primary" href={whatsappUrl("Olá! Quero agendar uma visita da Maaxis no meu comércio.")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon /> Agendar uma visita</a>
+              </div>
+            </div>
+            <ul className="cities" aria-label="Cidades atendidas">
+              {CITIES.map((c, i) => (
+                <Reveal as="li" key={c} className="city" delay={i * 70}><MapPin size={22} /> {c}</Reveal>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -249,6 +327,15 @@ export function Home() {
               <img src="/img/3d/funko-pop.webp" alt="Bonecos Funko Pop personalizados feitos em impressão 3D" width={1080} height={600} loading="lazy" />
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ---------- perguntas frequentes ---------- */}
+      <section className="section section--alt" id="perguntas">
+        <div className="container">
+          <SectionHead eyebrow="Perguntas frequentes" title="O que o comerciante costuma perguntar" center />
+          <Faq items={FAQ.map((f) => ({ q: f.q, a: f.a }))} />
+          <script type="application/ld+json">{JSON.stringify(FAQ_LD)}</script>
         </div>
       </section>
 

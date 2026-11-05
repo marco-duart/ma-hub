@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
-import { ArrowUpRight, ChevronDown, Menu, Mail, X } from "lucide-react";
-import { APPS, NAV, SITE, SYSTEMS, mailto, whatsappUrl } from "@/site";
+import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { APPS, NAV, SITE, SYSTEMS, whatsappUrl } from "@/site";
 import { InstagramIcon, WhatsAppIcon } from "./Parts";
 import { ScrollManager } from "./ScrollManager";
 import { LightboxProvider } from "./Lightbox";
@@ -60,7 +60,7 @@ function Header() {
           {NAV.map((n) => (
             <NavLink key={n.to} to={n.to} className="nav__link">{n.label}</NavLink>
           ))}
-          <a className="btn btn--primary btn--sm nav__cta" href={mailto("Quero conhecer os sistemas da M.A. Axis")}>Fale com a gente</a>
+          <a className="btn btn--primary btn--sm nav__cta" href={whatsappUrl("Olá! Quero conhecer as soluções da M.A. Axis para o meu negócio.")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={16} /> Fale com a gente</a>
         </nav>
 
         <button type="button" className="menu-btn" aria-label={drawer ? "Fechar menu" : "Abrir menu"} aria-expanded={drawer} aria-controls="menu-mobile" onClick={() => setDrawer((v) => !v)}>
@@ -81,7 +81,7 @@ function Header() {
           ))}
           <Link to="/apps" className="drawer__link">Apps no Google Play</Link>
           <Link to="/contato" className="drawer__link">Contato e como contratar</Link>
-          <a className="btn btn--primary" href={mailto("Quero conhecer os sistemas da M.A. Axis")}><Mail size={18} /> Fale com a gente</a>
+          <a className="btn btn--primary" href={whatsappUrl("Olá! Quero conhecer as soluções da M.A. Axis para o meu negócio.")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon /> Fale com a gente</a>
         </div>
       )}
     </header>
@@ -95,7 +95,7 @@ function Footer() {
         <div className="footer__grid">
           <div className="footer__about">
             <Link to="/" className="brand"><img src="/logo.png" alt="" width={38} height={38} /><span>M.A. Axis</span></Link>
-            <p>Sistemas para quem empreende, contrata e vive a estrada. Feitos no Brasil, em português, com apps no Google Play.</p>
+            <p>Tecnologia próxima do seu negócio: sistemas, implantação e suporte para pequenos comércios em Goiânia, Aparecida de Goiânia, Senador Canedo e Trindade.</p>
           </div>
           <div>
             <h4>Sistemas</h4>

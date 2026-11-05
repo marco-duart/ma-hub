@@ -195,3 +195,22 @@ a.mshot { display: block; text-decoration: none; }
 .mshot:hover .phone__body { transform: translateY(-8px); }
 .mshot small { display: block; margin-top: 14px; text-align: center; color: var(--muted); font-size: 14px; }
 .mshot small b { display: block; color: var(--accent); font-family: var(--font-display); font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ---------- home: título descritivo + frase da marca ---------- */
+.hero .hero-title { font-size: clamp(36px, 4.6vw, 62px); max-width: 15ch; line-height: 1.04; letter-spacing: -0.035em; }
+.hero-words--tagline { margin-top: 18px; font-family: var(--font-display); font-weight: 700; font-size: clamp(20px, 2.2vw, 28px); letter-spacing: -0.02em; }
+
+/* ---------- home: o problema nas palavras do comerciante ---------- */
+.pains { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.pain { padding: 26px 24px; border-radius: var(--r-lg); border: 1px solid var(--line); background: rgba(255, 255, 255, 0.03); display: grid; gap: 12px; align-content: start; transition: border-color 0.3s, transform 0.3s var(--ease); }
+.pain:hover { border-color: rgba(var(--accent-rgb), 0.5); transform: translateY(-4px); }
+.pain__q { font-family: var(--font-display); font-weight: 600; font-size: 21px; line-height: 1.25; color: var(--text); }
+.pain__a { color: var(--muted); font-size: 16px; padding-left: 14px; border-left: 2px solid rgba(var(--accent-rgb), 0.6); }
+@media (max-width: 960px) { .pains { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .pains { grid-template-columns: 1fr; } }
+
+/* ---------- home: cidades atendidas ---------- */
+.cities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.city { display: flex; align-items: center; gap: 12px; padding: 22px 20px; border-radius: var(--r-lg); border: 1px solid var(--line-2); background: rgba(255, 255, 255, 0.04); font-family: var(--font-display); font-weight: 600; font-size: 19px; }
+.city svg { color: var(--accent); flex: none; }
+@media (max-width: 480px) { .cities { grid-template-columns: 1fr; } }
