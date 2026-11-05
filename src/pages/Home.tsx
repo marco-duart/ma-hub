@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, BriefcaseBusiness, Mail, Store, Bike } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BriefcaseBusiness, HeartHandshake, LifeBuoy, Mail, PiggyBank, Store, Bike } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Reveal } from "@/components/Reveal";
 import { Phone, Marquee } from "@/components/Media";
@@ -63,6 +63,7 @@ export function Home() {
             <div className="chips hero__meta">
               <span className="chip">Dita</span><span className="chip">MostraAi</span><span className="chip">Profyla</span><span className="chip">Rasttro</span>
               <span className="chip chip--accent">6 apps no Google Play</span>
+              <a className="chip chip--accent" href="#sob-medida">Sob medida, com preço que cabe no bolso</a>
             </div>
           </div>
           <div className="fan" aria-label="Telas dos quatro sistemas">
@@ -143,6 +144,42 @@ export function Home() {
                 <Link to="/rasttro"><img src={systemByKey("rasttro").icon} alt="" width={26} height={26} /> Rasttro</Link>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- sob medida, preço de comércio ---------- */}
+      <section className="section" id="sob-medida">
+        <div className="container">
+          <SectionHead eyebrow="Sob medida" title={<>Do jeito do seu negócio, com um preço que <span className="grad-text">cabe no seu bolso</span></>}>
+            Comércio pequeno não precisa de sistema caro nem complicado. Eu parto das soluções prontas e ajusto à sua rotina, ou crio algo só seu, sempre com um orçamento do tamanho do seu negócio.
+          </SectionHead>
+          <div className="grid-3">
+            <Reveal className="card feat">
+              <span className="icon-bubble"><PiggyBank size={24} /></span>
+              <h3>Personalizado sem pesar no bolso</h3>
+              <p>Ajustes nos sistemas, integrações com o que você já usa ou uma solução nova. O orçamento é combinado com você e sem compromisso.</p>
+            </Reveal>
+            <Reveal className="card feat" delay={90}>
+              <span className="icon-bubble"><HeartHandshake size={24} /></span>
+              <h3>Acompanhamento de perto</h3>
+              <p>Eu mesmo configuro, cadastro seus produtos e ensino você e a sua equipe. Sem central de atendimento: você fala direto comigo pelo WhatsApp.</p>
+            </Reveal>
+            <Reveal className="card feat" delay={180}>
+              <span className="icon-bubble"><LifeBuoy size={24} /></span>
+              <h3>Suporte que continua</h3>
+              <p>Depois que você começa, eu sigo do seu lado para dúvidas, ajustes e novas ideias. O sistema cresce junto com o seu negócio.</p>
+            </Reveal>
+          </div>
+          <div className="steps" style={{ marginTop: "clamp(28px,4vw,44px)" }}>
+            <Reveal className="step"><h3>Conversa</h3><p>Você me conta como funciona o seu dia e onde o tempo e o dinheiro escapam.</p></Reveal>
+            <Reveal className="step" delay={80}><h3>Proposta do seu tamanho</h3><p>Eu sugiro a solução e o valor que fazem sentido para o seu comércio.</p></Reveal>
+            <Reveal className="step" delay={160}><h3>Eu configuro e ensino</h3><p>Deixo tudo pronto com os seus produtos e treino quem vai usar.</p></Reveal>
+            <Reveal className="step" delay={240}><h3>Acompanho de perto</h3><p>Suporte direto comigo, com ajustes sempre que o negócio pedir.</p></Reveal>
+          </div>
+          <div className="btn-row" style={{ marginTop: 32 }}>
+            <a className="btn btn--primary" href={whatsappUrl("Olá! Quero uma solução do jeito do meu negócio. Pode me passar um orçamento?")} target="_blank" rel="noopener noreferrer"><WhatsAppIcon /> Pedir um orçamento sem compromisso</a>
+            <Link className="btn btn--ghost" to="/contato">Ver como contratar <ArrowRight size={18} /></Link>
           </div>
         </div>
       </section>
